@@ -23,7 +23,7 @@ struct u_process;
  *
  * @todo If built without libbsd support, a placeholder value is returned that needs to be handled by the caller.
  *
- * @return a new u_process handle if no monado instance is running, NULL if another instance is already running.
+ * @return a new u_process handle if no VRuska Engine instance is running, NULL if another instance is already running.
  * @ingroup aux_util
  */
 struct u_process *

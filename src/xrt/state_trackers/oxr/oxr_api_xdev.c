@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: BSL-1.0
 /*!
  * @file
- * @brief  Monado @ref xrt_device API functions.
+ * @brief  VRuska Engine @ref xrt_device API functions.
  * @author Jakob Bornecrantz <jakob@collabora.com>
  * @ingroup oxr_api
  */

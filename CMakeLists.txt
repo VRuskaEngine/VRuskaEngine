@@ -6,7 +6,7 @@ project(
 	XRT
 	VERSION 25.0.0
 	LANGUAGES C CXX
-	DESCRIPTION "Monado(XRT) by Collabora et al"
+	DESCRIPTION "VRuska Engine(XRT) by Collabora et al"
 	)
 
 # CMake 3.11 introduced CMP0072 - Prefer GLVND
@@ -36,7 +36,7 @@ option(
 if(NOT WIN32 AND NOT ANDROID)
 	option(
 		XRT_OPENXR_INSTALL_ACTIVE_RUNTIME
-		"Make Monado the system-wide default OpenXR runtime on install (requires superuser permissions)"
+		"Make VRuska Engine the system-wide default OpenXR runtime on install (requires superuser permissions)"
 		OFF
 		)
 endif()
@@ -256,8 +256,8 @@ option_with_deps(XRT_MODULE_COMPOSITOR_MAIN "Build main compositor host function
 option_with_deps(XRT_MODULE_COMPOSITOR_NULL "Build testing null compositor" DEPENDS XRT_MODULE_COMPOSITOR XRT_HAVE_VULKAN)
 option_with_deps(XRT_MODULE_MERCURY_HANDTRACKING "Enable Mercury hand tracking" DEPENDS XRT_HAVE_OPENCV XRT_HAVE_ONNXRUNTIME)
 
-option(XRT_MODULE_MONADO_CLI "Build monado-cli" ON)
-option_with_deps(XRT_MODULE_MONADO_GUI "Build monado-gui" DEPENDS XRT_HAVE_SDL2)
+option(XRT_MODULE_VRuska Engine_CLI "Build VRuska Engine-cli" ON)
+option_with_deps(XRT_MODULE_VRuska Engine_GUI "Build VRuska Engine-gui" DEPENDS XRT_HAVE_SDL2)
 option(XRT_MODULE_AUX_VIVE "Build aux_vive" ON)
 option(XRT_MODULE_OPENXR_STATE_TRACKER "Build OpenXR State Tracker" ON)
 
@@ -300,7 +300,7 @@ endif()
 
 # systemd detailed config
 option_with_deps(XRT_INSTALL_SYSTEMD_UNIT_FILES "Install user unit files for systemd socket activation on installation" DEPENDS XRT_HAVE_SYSTEMD)
-option_with_deps(XRT_INSTALL_ABSOLUTE_SYSTEMD_UNIT_FILES "Use an absolute path to monado-system in installed user unit files for systemd socket activation" DEPENDS XRT_HAVE_SYSTEMD)
+option_with_deps(XRT_INSTALL_ABSOLUTE_SYSTEMD_UNIT_FILES "Use an absolute path to VRuska Engine-system in installed user unit files for systemd socket activation" DEPENDS XRT_HAVE_SYSTEMD)
 
 # Driver deps to use (sorted, though there are some internal dependencies)
 option_with_deps(XRT_HAVE_BLUETOOTH "Enable Bluetooth (legacy, non-ble)" DEPENDS BLUETOOTH_FOUND)
@@ -346,9 +346,9 @@ option_with_deps(XRT_BUILD_DRIVER_SIMULAVR "Enable simula driver" DEPENDS XRT_HA
 option(XRT_BUILD_DRIVER_SIMULATED "Enable simulated driver" ON)
 
 option(XRT_BUILD_SAMPLES "Enable compiling sample code implementations that will not be linked into any final targets" ON)
-set(XRT_IPC_MSG_SOCK_FILENAME monado_comp_ipc CACHE STRING "Service socket filename")
-set(XRT_IPC_SERVICE_PID_FILENAME monado.pid CACHE STRING "Service pidfile filename")
-set(XRT_OXR_RUNTIME_SUFFIX monado CACHE STRING "OpenXR client library suffix")
+set(XRT_IPC_MSG_SOCK_FILENAME VRuska Engine_comp_ipc CACHE STRING "Service socket filename")
+set(XRT_IPC_SERVICE_PID_FILENAME VRuska Engine.pid CACHE STRING "Service pidfile filename")
+set(XRT_OXR_RUNTIME_SUFFIX VRuska Engine CACHE STRING "OpenXR client library suffix")
 
 # Most users won't touch these.
 mark_as_advanced(XRT_MODULE_COMPOSITOR_MAIN XRT_MODULE_COMPOSITOR_NULL XRT_FEATURE_OPENXR)
@@ -449,9 +449,9 @@ list(
 # Can be overridden from outside/command line
 if(ANDROID AND NOT XRT_ANDROID_PACKAGE)
 	if(XRT_FEATURE_SERVICE)
-		set(XRT_ANDROID_PACKAGE "org.freedesktop.monado.openxr_runtime.out_of_process")
+		set(XRT_ANDROID_PACKAGE "org.freedesktop.VRuska Engine.openxr_runtime.out_of_process")
 	else()
-		set(XRT_ANDROID_PACKAGE "org.freedesktop.monado.openxr_runtime.in_process")
+		set(XRT_ANDROID_PACKAGE "org.freedesktop.VRuska Engine.openxr_runtime.in_process")
 	endif()
 endif()
 
@@ -585,8 +585,8 @@ message(STATUS "#    MODULE_COMPOSITOR_MAIN:      ${XRT_MODULE_COMPOSITOR_MAIN}"
 message(STATUS "#    MODULE_COMPOSITOR_NULL:      ${XRT_MODULE_COMPOSITOR_NULL}")
 message(STATUS "#    MODULE_MERCURY_HANDTRACKING: ${XRT_MODULE_MERCURY_HANDTRACKING}")
 message(STATUS "#    MODULE_IPC:                  ${XRT_MODULE_IPC}")
-message(STATUS "#    MODULE_MONADO_GUI:           ${XRT_MODULE_MONADO_GUI}")
-message(STATUS "#    MODULE_MONADO_CLI:           ${XRT_MODULE_MONADO_CLI}")
+message(STATUS "#    MODULE_VRuska Engine_GUI:           ${XRT_MODULE_VRuska Engine_GUI}")
+message(STATUS "#    MODULE_VRuska Engine_CLI:           ${XRT_MODULE_VRuska Engine_CLI}")
 message(STATUS "#    MODULE_OPENXR_STATE_TRACKER: ${XRT_MODULE_OPENXR_STATE_TRACKER}")
 message(STATUS "#")
 message(STATUS "#    FEATURE_AHARDWARE_BUFFER:                      ${XRT_FEATURE_AHARDWARE_BUFFER}")

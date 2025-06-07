@@ -302,7 +302,7 @@ ipc_client_check_git_tag(struct ipc_connection *ipc_c)
 		return XRT_SUCCESS;
 	}
 
-	IPC_ERROR(ipc_c, "Monado client library version %s does not match service version %s", u_git_tag,
+	IPC_ERROR(ipc_c, "VRuska Engine client library version %s does not match service version %s", u_git_tag,
 	          ipc_c->ism->u_git_tag);
 
 	if (!debug_get_bool_option_ipc_ignore_version()) {
@@ -372,14 +372,14 @@ ipc_client_connection_init(struct ipc_connection *ipc_c,
 	if (!ipc_client_socket_connect(ipc_c)) {
 #endif
 		IPC_ERROR(ipc_c,
-		          "Failed to connect to monado service process\n\n"
+		          "Failed to connect to VRuska Engine service process\n\n"
 		          "###\n"
 		          "#\n"
 		          "# Please make sure that the service process is running\n"
 		          "#\n"
-		          "# It is called \"monado-service\"\n"
+		          "# It is called \"VRuska Engine-service\"\n"
 		          "# In build trees, it is located "
-		          "\"build-dir/src/xrt/targets/service/monado-service\"\n"
+		          "\"build-dir/src/xrt/targets/service/VRuska Engine-service\"\n"
 		          "#\n"
 		          "###");
 		os_mutex_destroy(&ipc_c->mutex);

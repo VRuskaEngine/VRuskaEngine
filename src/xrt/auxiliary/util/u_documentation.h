@@ -14,7 +14,7 @@
  * @defgroup aux Auxiliary
  * @ingroup xrt
  *
- * @brief Shared code and helpers for Monado.
+ * @brief Shared code and helpers for VRuska Engine.
  */
 
 /*!
@@ -29,7 +29,7 @@
  * @dir src/xrt/auxiliary
  * @ingroup xrt
  *
- * @brief Shared code and helpers for Monado.
+ * @brief Shared code and helpers for VRuska Engine.
  */
 
 /*!
@@ -41,7 +41,7 @@
 
 #ifdef __cplusplus
 /*!
- * @brief C++-only APIs in Monado.
+ * @brief C++-only APIs in VRuska Engine.
  *
  * There are not very many of them.
  */

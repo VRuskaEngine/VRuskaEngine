@@ -27,7 +27,7 @@ main(int argc, char *argv[])
 	struct ipc_server_main_info ismi = {
 	    .udgci =
 	        {
-	            .window_title = "Monado SDL Test Debug GUI",
+	            .window_title = "VRuska Engine SDL Test Debug GUI",
 	            .open = U_DEBUG_GUI_OPEN_AUTO,
 	        },
 	};

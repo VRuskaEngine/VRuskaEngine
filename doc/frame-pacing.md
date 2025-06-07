@@ -1,7 +1,7 @@
 # Frame Pacing/Timing {#frame-pacing}
 
 <!--
-Copyright 2021, Collabora, Ltd. and the Monado contributors
+Copyright 2021, Collabora, Ltd. and the VRuska Engine contributors
 SPDX-License-Identifier: BSL-1.0
 -->
 

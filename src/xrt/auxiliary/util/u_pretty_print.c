@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: BSL-1.0
 /*!
  * @file
- * @brief  Pretty printing various Monado things.
+ * @brief  Pretty printing various VRuska Engine things.
  * @author Jakob Bornecrantz <jakob@collabora.com>
  * @author Korcan Hussein <korcan.hussein@collabora.com>
  * @ingroup aux_pretty

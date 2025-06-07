@@ -3,7 +3,7 @@
 /*!
  * @file
  * @brief  Macros for generating extension-related tables and code and
- * inspecting Monado's extension support.
+ * inspecting VRuska Engine's extension support.
  *
  * MOSTLY GENERATED CODE - see below!
  *
@@ -800,7 +800,7 @@
  * generate tables, code, etc. related to OpenXR extensions.
  * Upon including invoking OXR_EXTENSION_SUPPORT_GENERATE() with some
  * MY_HANDLE_EXTENSION(mixed_case, all_caps), MY_HANDLE_EXTENSION will be called
- * for each extension implemented in Monado and supported in this build:
+ * for each extension implemented in VRuska Engine and supported in this build:
  *
  * - The first parameter is the name of the extension without the leading XR_
  *   prefix: e.g. `KHR_opengl_enable`

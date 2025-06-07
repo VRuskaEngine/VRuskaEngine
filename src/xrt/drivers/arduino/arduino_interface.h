@@ -21,7 +21,7 @@ struct os_ble_device;
  * @defgroup drv_arduino Arduino flexible input device driver
  * @ingroup drv
  *
- * @brief Driver for the Monado Arduino based flexible input device.
+ * @brief Driver for the VRuska Engine Arduino based flexible input device.
  */
 
 /*!

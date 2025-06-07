@@ -1,7 +1,7 @@
 # How to make a release {#how-to-release}
 
 <!--
-Copyright 2021, Collabora, Ltd. and the Monado contributors
+Copyright 2021, Collabora, Ltd. and the VRuska Engine contributors
 SPDX-License-Identifier: BSL-1.0
 -->
 
@@ -31,7 +31,7 @@ Edit the files below to update the version number embedded in them.
 See previous commits for exact places.
 
 ```sh
-git commit -m "monado: Update version" CMakeLists.txt vcpkg.json
+git commit -m "VRuska Engine: Update version" CMakeLists.txt vcpkg.json
 ```
 
 ## Tag the code

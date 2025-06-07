@@ -1212,10 +1212,10 @@ oh_device_create(ohmd_context *ctx, bool no_hmds, struct xrt_device **out_xdevs)
 			U_LOG_D("Rejecting device idx %i, is a External device.", i);
 			continue;
 		} else if (strcmp(prod, "HoloLens Sensors") == 0) {
-			U_LOG_W("Ignoring OpenHMD WMR device idx %i. Use the native Monado WMR driver.", i);
+			U_LOG_W("Ignoring OpenHMD WMR device idx %i. Use the native VRuska Engine WMR driver.", i);
 			continue;
 		} else if (strncmp(prod, "Rift S", strlen("Rift S")) == 0) {
-			U_LOG_W("Ignoring OpenHMD Rift S device idx %i. Use the native Monado Rift S driver.", i);
+			U_LOG_W("Ignoring OpenHMD Rift S device idx %i. Use the native VRuska Engine Rift S driver.", i);
 			continue;
 		}
 

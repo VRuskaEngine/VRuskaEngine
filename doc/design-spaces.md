@@ -1,7 +1,7 @@
-# Spaces in Monado design {#design-spaces}
+# Spaces in VRuska Engine design {#design-spaces}
 
 <!--
-Copyright 2022-2023, Collabora, Ltd. and the Monado contributors
+Copyright 2022-2023, Collabora, Ltd. and the VRuska Engine contributors
 SPDX-License-Identifier: BSL-1.0
 -->
 
@@ -39,5 +39,5 @@ it easier for the IPC layer to implement it.
   the service side. Or is it enough to only expose the spaces/nodes a app needs
   and keep all of the links on the service side only.
   * **RESOLVED:** The graph is kept opaque from the application (and all other
-    parts of Monado, an space overseer has greater freedom in how to configure
+    parts of VRuska Engine, an space overseer has greater freedom in how to configure
     the space graph).

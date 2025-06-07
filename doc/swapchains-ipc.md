@@ -1,11 +1,11 @@
 # Swapchain Allocation and IPC {#swapchains-ipc}
 
 <!--
-Copyright 2024, Collabora, Ltd. and the Monado contributors
+Copyright 2024, Collabora, Ltd. and the VRuska Engine contributors
 SPDX-License-Identifier: BSL-1.0
 -->
 
-The control flow in Monado for allocating the images/buffers used for a given
+The control flow in VRuska Engine for allocating the images/buffers used for a given
 @ref XrSwapchain can vary widely based on a number of factors.
 
 ## Simple in-process

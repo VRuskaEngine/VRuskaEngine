@@ -1,19 +1,19 @@
 # Building on Windows {#winbuild}
 
 <!--
-Copyright 2022, Collabora, Ltd. and the Monado contributors
+Copyright 2022, Collabora, Ltd. and the VRuska Engine contributors
 SPDX-License-Identifier: BSL-1.0
 -->
 
 [TOC]
 
-Monado has a work-in-progress port to Windows. While it's not ready for
+VRuska Engine has a work-in-progress port to Windows. While it's not ready for
 widespread usage due to some rough edges and lack of drivers, it does build and
 can serve as a base for further development.
 
 ## System Dependencies
 
-Most dependencies for the Windows build on Monado are handled by [vcpkg][].
+Most dependencies for the Windows build on VRuska Engine are handled by [vcpkg][].
 However, some are not installable or usable (in the way we want) through there,
 so they require separate installation. For each, the command line to install
 with "winget" (built in to at least Windows 11, and possibly newer builds of
@@ -43,7 +43,7 @@ comfortable with. (Scoop commands may require adding the "extras" bucket.)
     which gets added to your PATH in a Visual Studio command prompt/PowerShell.
 
 You will also need Visual Studio. Most current development is happening with
-2022, though it should also build with 2019. (Work on Monado might meet the
+2022, though it should also build with 2019. (Work on VRuska Engine might meet the
 requirements for Microsoft's no-charge
 [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/)
 license - see the
@@ -66,7 +66,7 @@ The main points to note are that:
   - If you have run `.\vcpkg integrate install` in your vcpkg directory, this
     toolchain is added automatically when you "Open Folder" in Visual Studio for
     a folder containing CMake build scripts. So, in this case, just open the
-    Monado source directory and everything will be set up automatically for you.
+    VRuska Engine source directory and everything will be set up automatically for you.
   - On the CMake command line, this means passing something like
     `"-DCMAKE_TOOLCHAIN_FILE=yourVcpkgDir\scripts\buildsystems\vcpkg.cmake"`
     (quotation marks possibly required depending on your shell).
@@ -77,7 +77,7 @@ The main points to note are that:
   the exported directory you extract), **and also** set `VCPKG_MANIFEST_MODE` to
   `OFF`. Because exported dependencies from vcpkg do not include the vcpkg tool
   binary itself (or the port files, etc), we can't use manifest mode and must
-  disable it. Instead, Monado will build against the dependencies installed in
+  disable it. Instead, VRuska Engine will build against the dependencies installed in
   your exported tree. Open a Visual Studio Developer PowerShell terminal to your
   source dir before following one of the following two sections to generate your
   build tree.
@@ -105,7 +105,7 @@ call "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliar
 
 @rem Change current directory
 w:
-cd "w:\src\monado"
+cd "w:\src\VRuska Engine"
 
 cmake -S . ^
   -B build
@@ -116,28 +116,28 @@ cmake -S . ^
 ninja -C build
 ```
 
-If you want to build the `outOfProcess` version of Monado, please add extra
+If you want to build the `outOfProcess` version of VRuska Engine, please add extra
 build parameter `-DXRT_FEATURE_SERVICE=ON`.
 
 ## Using
 
-### Run Monado service
+### Run VRuska Engine service
 
-If you build the `outOfProcess` version of Monado, you need to start
-the `monado-service.exe` first with the following command in `cmd.exe`
+If you build the `outOfProcess` version of VRuska Engine, you need to start
+the `VRuska Engine-service.exe` first with the following command in `cmd.exe`
 command prompt before running OpenXR clients:
 
 ```bat
-monado-service.exe
+VRuska Engine-service.exe
 ```
 
 or the following in PowerShell:
 
 ```pwsh
-.\monado-service.exe
+.\VRuska Engine-service.exe
 ```
 
-If you build the `inProcess` version of Monado, you don't need the above
+If you build the `inProcess` version of VRuska Engine, you don't need the above
 steps, and you can jump to the next section to run OpenXR clients directly.
 
 ### Run hello_xr
@@ -151,14 +151,14 @@ changing path as required:
 
 ```bat
 @rem May have the build type as an additional directory if using a multi-config generator
-set XR_RUNTIME_JSON=w:\src\monado\build\openxr_monado-dev.json
+set XR_RUNTIME_JSON=w:\src\VRuska Engine\build\openxr_VRuska Engine-dev.json
 hello_xr.exe -G Vulkan
 ```
 
 or the following in PowerShell:
 
 ```pwsh
-$env:XR_RUNTIME_JSON="w:\src\monado\build\openxr_monado-dev.json"
+$env:XR_RUNTIME_JSON="w:\src\VRuska Engine\build\openxr_VRuska Engine-dev.json"
 .\hello_xr.exe -G Vulkan
 ```
 

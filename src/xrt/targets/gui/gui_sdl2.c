@@ -62,7 +62,7 @@ gui_sdl2_init(struct sdl2_program *p)
 	p->sdl_initialized = true;
 
 	char title[1024];
-	snprintf(title, sizeof(title), "Monado! ☺ (%s)", u_git_tag);
+	snprintf(title, sizeof(title), "VRuska Engine! ☺ (%s)", u_git_tag);
 
 	int x = SDL_WINDOWPOS_UNDEFINED;
 	int y = SDL_WINDOWPOS_UNDEFINED;

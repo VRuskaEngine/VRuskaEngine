@@ -28,7 +28,7 @@ struct ipc_client_android;
 /**
  * @brief Create an ipc_client_android object.
  *
- * Uses org.freedesktop.monado.ipc.Client
+ * Uses org.freedesktop.VRuska Engine.ipc.Client
  *
  * @param vm Java VM pointer
  * @param activity An android.app.Activity jobject, cast to `void *`.

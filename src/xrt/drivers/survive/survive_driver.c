@@ -1339,7 +1339,7 @@ survive_get_devices(struct xrt_device **out_xdevs, struct vive_config **out_vive
 	SurviveSimpleContext *actx = NULL;
 #if 1
 	char *survive_args[] = {
-	    "Monado-libsurvive", "--lighthouse-gen", (char *)debug_get_option_survive_lh_gen(),
+	    "VRuska Engine-libsurvive", "--lighthouse-gen", (char *)debug_get_option_survive_lh_gen(),
 	    //"--time-window", "1500000"
 	    //"--use-imu", "0",
 	    //"--use-kalman", "0"

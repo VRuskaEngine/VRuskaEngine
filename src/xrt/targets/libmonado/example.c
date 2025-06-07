@@ -2,12 +2,12 @@
 // SPDX-License-Identifier: BSL-1.0
 /*!
  * @file
- * @brief  Small cli application to demonstrate use of libmonado.
+ * @brief  Small cli application to demonstrate use of libVRuska Engine.
  * @author Rylie Pavlik <rylie.pavlik@collabora.com>
  * @author Pete Black <pblack@collabora.com>
  */
 
-#include "monado.h"
+#include "VRuska Engine.h"
 
 #include <ctype.h>
 #include <limits.h>

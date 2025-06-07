@@ -165,7 +165,7 @@ sample_hmd_get_visibility_mask(struct xrt_device *xdev,
 struct xrt_device *
 sample_hmd_create(void)
 {
-	// This indicates you won't be using Monado's built-in tracking algorithms.
+	// This indicates you won't be using VRuska Engine's built-in tracking algorithms.
 	enum u_device_alloc_flags flags =
 	    (enum u_device_alloc_flags)(U_DEVICE_ALLOC_HMD | U_DEVICE_ALLOC_TRACKING_NONE);
 

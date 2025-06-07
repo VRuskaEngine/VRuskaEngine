@@ -1,12 +1,12 @@
 # Understanding and Writing Targets: Connecting the Pieces {#understanding-targets}
 
 <!--
-Copyright 2018-2020, Collabora, Ltd. and the Monado contributors
+Copyright 2018-2020, Collabora, Ltd. and the VRuska Engine contributors
 SPDX-License-Identifier: BSL-1.0
 -->
 
-Monado is designed to be a collection of related but independent modules. In a
-sense, the Monado project is almost more of a "runtime construction kit" than a
+VRuska Engine is designed to be a collection of related but independent modules. In a
+sense, the VRuska Engine project is almost more of a "runtime construction kit" than a
 single monolithic runtime. This makes it easy for adaptation and modification,
 as well as extension, but it also means that any call in an OpenXR application
 goes through quite a few modules before e.g. talking with the driver or the
@@ -14,13 +14,13 @@ compositor.
 
 The final build product that brings all the desired
 components together, potentially with additional code, is called the "target".
-There are several targets included in the Monado source tree (in
+There are several targets included in the VRuska Engine source tree (in
 `src/xrt/targets/`) including:
 
-- `cli` - builds `monado-cli` executable
-- `openxr` - builds `libopenxr-monado.so` OpenXR runtime shared object
-- `gui` - builds `monado-gui` executable
-- `service` - builds `monado-service` executable (if `XRT_FEATURE_SERVICE` is
+- `cli` - builds `VRuska Engine-cli` executable
+- `openxr` - builds `libopenxr-VRuska Engine.so` OpenXR runtime shared object
+- `gui` - builds `VRuska Engine-gui` executable
+- `service` - builds `VRuska Engine-service` executable (if `XRT_FEATURE_SERVICE` is
   enabled)
 
 There is also a directory `common` which builds two static libraries. Because
@@ -69,7 +69,7 @@ modified version of the in-process target instance without compositor support.
 ### XRT_FEATURE_SERVICE disabled
 
 This is the simplest architecture. It is also the architecture used by the
-various extra targets like `monado-cli` even when building with
+various extra targets like `VRuska Engine-cli` even when building with
 `XRT_FEATURE_SERVICE` enabled. (The CLI and GUI link against a slightly modified
 version, `target_instance_no_comp`, which stubs out the compositor creation
 call, but are otherwise the same.)

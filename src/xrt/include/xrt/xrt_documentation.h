@@ -10,9 +10,9 @@
 #pragma once
 
 /*!
- * @defgroup xrt Monado(XRT)
+ * @defgroup xrt VRuska Engine(XRT)
  *
- * @brief Monado XR runtime project.
+ * @brief VRuska Engine XR runtime project.
  */
 
 /*!
@@ -26,14 +26,14 @@
  * @defgroup xrt_iface XRT interfaces
  * @ingroup inc
  *
- * @brief The main interface shared between the different components of Monado.
+ * @brief The main interface shared between the different components of VRuska Engine.
  */
 
 /*!
  * @defgroup drv Drivers
  * @ingroup xrt
  *
- * @brief Native and wrapper drivers in Monado.
+ * @brief Native and wrapper drivers in VRuska Engine.
  */
 
 /*!

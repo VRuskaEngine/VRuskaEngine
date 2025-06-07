@@ -143,7 +143,7 @@ u_device_assign_xdev_roles(struct xrt_device **xdevs, size_t xdev_count, int *he
  *
  * Takes in a translation from the left to right eye, and returns a center to left or right eye transform that assumes
  * the eye relation is symmetrical around the tracked point ("center eye"). Knowing IPD is a subset of this: If you know
- * IPD better than the overall Monado system, copy @p eye_relation and put your known IPD in @p real_eye_relation->x
+ * IPD better than the overall VRuska Engine system, copy @p eye_relation and put your known IPD in @p real_eye_relation->x
  *
  * If you have rotation, apply it after calling this function.
  *

@@ -52,7 +52,7 @@ struct android_custom_surface;
  * This is an asynchronous operation, so this creates an opaque pointer for you
  * to check on the results and maintain a reference to the result.
  *
- * Uses org.freedesktop.monado.auxiliary.MonadoView
+ * Uses org.freedesktop.VRuska Engine.auxiliary.VRuska EngineView
  *
  * @param vm Java VM pointer
  * @param context An android.content.Context jobject, cast to `void *`.

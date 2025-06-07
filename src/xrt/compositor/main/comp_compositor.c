@@ -89,7 +89,7 @@
 #include <dlfcn.h>
 #endif
 
-#define WINDOW_TITLE "Monado"
+#define WINDOW_TITLE "VRuska Engine"
 
 DEBUG_GET_ONCE_BOOL_OPTION(disable_deferred, "XRT_COMPOSITOR_DISABLE_DEFERRED", false)
 

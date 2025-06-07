@@ -1,7 +1,7 @@
 # CI and Generated Stuff Readme
 
 <!--
-# Copyright 2018-2024, Collabora, Ltd. and the Monado contributors
+# Copyright 2018-2024, Collabora, Ltd. and the VRuska Engine contributors
 #
 # SPDX-License-Identifier: CC0-1.0
 -->

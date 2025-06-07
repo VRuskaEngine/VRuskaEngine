@@ -765,7 +765,7 @@ wmr_hmd_activate_reverb(struct wmr_hmd *wh)
 	WMR_INFO(wh, "Sent activation report.");
 
 	// Enable the HMD screen now, if required. Otherwise, if screen should initially be disabled, then
-	// proactively disable it now. Why? Because some cases of irregular termination of Monado will
+	// proactively disable it now. Why? Because some cases of irregular termination of VRuska Engine will
 	// leave either the 'Hololens Sensors' device or its 'companion' device alive across restarts.
 	wmr_hmd_screen_enable_reverb(wh, wh->hmd_screen_enable);
 
@@ -844,7 +844,7 @@ wmr_hmd_activate_odyssey_plus(struct wmr_hmd *wh)
 	HID_GET(wh, hid, data, "data_3");
 
 	// Enable the HMD screen now, if required. Otherwise, if screen should initially be disabled, then
-	// proactively disable it now. Why? Because some cases of irregular termination of Monado will
+	// proactively disable it now. Why? Because some cases of irregular termination of VRuska Engine will
 	// leave either the 'Hololens Sensors' device or its 'companion' device alive across restarts.
 	wmr_hmd_screen_enable_odyssey_plus(wh, wh->hmd_screen_enable);
 

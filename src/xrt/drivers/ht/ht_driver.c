@@ -247,7 +247,7 @@ ht_device_create(struct xrt_frame_context *xfctx,
 	if (ret < 0) {
 		U_LOG_E(
 		    "Could not find any directory with hand-tracking models!\n\t"
-		    "Run ./scripts/get-ht-models.sh or install monado-data package");
+		    "Run ./scripts/get-ht-models.sh or install VRuska Engine-data package");
 		return -1;
 	}
 

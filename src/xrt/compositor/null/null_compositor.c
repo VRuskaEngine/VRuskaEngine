@@ -430,7 +430,7 @@ null_compositor_layer_commit(struct xrt_compositor *xc, xrt_graphics_sync_handle
 	int64_t frame_id = c->base.layer_accum.data.frame_id;
 	int64_t display_time_ns = c->base.layer_accum.layers[0].data.timestamp;
 
-	// Default value from monado, overridden by HMD device where possible.
+	// Default value from VRuska Engine, overridden by HMD device where possible.
 	struct xrt_vec3 default_eye_relation = {0.063f, 0.f, 0.f};
 	struct xrt_space_relation head_relation = {0};
 
@@ -558,7 +558,7 @@ null_compositor_create_system(struct xrt_device *xdev, struct xrt_system_composi
 	          "################################################################################\n"
 	          "# Null compositor starting, if you intended to use the null compositor (for CI #\n"
 	          "# integration) then everything is mostly likely setup correctly. But if you    #\n"
-	          "# intended to use Monado with real hardware it you probably built Monado       #\n"
+	          "# intended to use VRuska Engine with real hardware it you probably built VRuska Engine       #\n"
 	          "# without the main compositor, please check your build config and make sure    #\n"
 	          "# that the main compositor is being built. Also make sure that the environment #\n"
 	          "# variable XRT_COMPOSITOR_NULL is not set.                                     #\n"

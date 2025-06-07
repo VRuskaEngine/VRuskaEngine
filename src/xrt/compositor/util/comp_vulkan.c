@@ -214,8 +214,8 @@ create_instance(struct vk_bundle *vk, const struct comp_vulkan_arguments *vk_arg
 
 	VkApplicationInfo app_info = {
 	    .sType = VK_STRUCTURE_TYPE_APPLICATION_INFO,
-	    .pApplicationName = "Monado Compositor",
-	    .pEngineName = "Monado",
+	    .pApplicationName = "VRuska Engine Compositor",
+	    .pEngineName = "VRuska Engine",
 	    .apiVersion = vk_args->required_instance_version,
 	};
 
@@ -232,7 +232,7 @@ create_instance(struct vk_bundle *vk, const struct comp_vulkan_arguments *vk_arg
 		return ret;
 	}
 
-	VK_NAME_INSTANCE(vk, vk->instance, "monado vulkan instance");
+	VK_NAME_INSTANCE(vk, vk->instance, "VRuska Engine vulkan instance");
 
 	/*
 	 * Post creation setup of Vulkan bundle.

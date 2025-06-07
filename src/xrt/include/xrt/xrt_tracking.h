@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: BSL-1.0
 /*!
  * @file
- * @brief  Header defining the tracking system integration in Monado.
+ * @brief  Header defining the tracking system integration in VRuska Engine.
  * @author Jakob Bornecrantz <jakob@collabora.com>
  * @ingroup xrt_iface
  */

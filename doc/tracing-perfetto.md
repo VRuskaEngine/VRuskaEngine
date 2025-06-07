@@ -1,17 +1,17 @@
 # Tracing with Perfetto {#tracing-perfetto}
 
 <!--
-Copyright 2021-2023, Collabora, Ltd. and the Monado contributors
+Copyright 2021-2023, Collabora, Ltd. and the VRuska Engine contributors
 SPDX-License-Identifier: BSL-1.0
 -->
 
 ## Requirements
 
-Monado uses the [Perfetto][]/[Percetto][] framework for tracing support. You
+VRuska Engine uses the [Perfetto][]/[Percetto][] framework for tracing support. You
 need to first build and install [Percetto][] in a place where CMake can find it.
 Build [Perfetto][] (you will have gotten the source at least as part of build
 [Percetto][]). It is a good idea to familiarise yourself with Perfetto before
-proceeding. You then need to build Monado with CMake and make sure
+proceeding. You then need to build VRuska Engine with CMake and make sure
 `XRT_FEATURE_TRACING` is enabled.
 
 * Build and install [Percetto][] - **note** Depending on the version of Percetto
@@ -19,7 +19,7 @@ proceeding. You then need to build Monado with CMake and make sure
   or use the one that is included in percetto. A release version of Perfetto is
   needed due to the `sdk/` directory and amalgamated files is only made there.
 * Build and get [Perfetto][] running.
-* Build Monado with CMake and with `XRT_FEATURE_TRACING` being `ON`.
+* Build VRuska Engine with CMake and with `XRT_FEATURE_TRACING` being `ON`.
 
 ## Running
 
@@ -39,7 +39,7 @@ buffers: {
 	fill_policy: DISCARD
 }
 
-# This is the important bit, this enables all data events from Monado.
+# This is the important bit, this enables all data events from VRuska Engine.
 data_sources: {
 	config: {
 		name: "track_event"
@@ -48,7 +48,7 @@ data_sources: {
 }
 ```
 
-Then run the following commands before launching Monado.
+Then run the following commands before launching VRuska Engine.
 
 ```bash
 # Start the daemon.
@@ -60,20 +60,20 @@ Then run the following commands before launching Monado.
 # Not needed with the preceding config.
 ./perfetto/out/linux_clang_release/traced_probes &
 
-# When you want to run a capture do and then run Monado.
+# When you want to run a capture do and then run VRuska Engine.
 ./perfetto/out/linux_clang_release/perfetto --txt -c data_events.cfg -o /tmp/trace.protobuf
 ```
 
-Finally run the App and Monado with `XRT_TRACING=true` exported.
+Finally run the App and VRuska Engine with `XRT_TRACING=true` exported.
 
 ```bash
-XRT_TRACING=true monado-serivce
+XRT_TRACING=true VRuska Engine-serivce
 ```
 
 ## Gotchas
 
 Here's where we write down bugs or other sharp corners that we found while
-running Monado with [Perfetto][]/[Percetto][] and tracing enabled.
+running VRuska Engine with [Perfetto][]/[Percetto][] and tracing enabled.
 
 ### OpenXR CTS
 

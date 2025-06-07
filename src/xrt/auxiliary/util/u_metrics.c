@@ -12,7 +12,7 @@
 #include "util/u_metrics.h"
 #include "util/u_debug.h"
 
-#include "monado_metrics.pb.h"
+#include "VRuska Engine_metrics.pb.h"
 #include "pb_encode.h"
 
 #include <stdio.h>
@@ -37,13 +37,13 @@ DEBUG_GET_ONCE_BOOL_OPTION(metrics_early_flush, "XRT_METRICS_EARLY_FLUSH", false
  */
 
 static void
-write_record(monado_metrics_Record *r)
+write_record(VRuska Engine_metrics_Record *r)
 {
-	uint8_t buffer[monado_metrics_Record_size + 10]; // Including submessage
+	uint8_t buffer[VRuska Engine_metrics_Record_size + 10]; // Including submessage
 
 
 	pb_ostream_t stream = pb_ostream_from_buffer(buffer, sizeof(buffer));
-	bool ret = pb_encode_submessage(&stream, &monado_metrics_Record_msg, r);
+	bool ret = pb_encode_submessage(&stream, &VRuska Engine_metrics_Record_msg, r);
 	if (!ret) {
 		U_LOG_E("Failed to encode metrics message!");
 		return;
@@ -67,10 +67,10 @@ write_version(uint32_t major, uint32_t minor)
 		return;
 	}
 
-	monado_metrics_Record record = monado_metrics_Record_init_default;
+	VRuska Engine_metrics_Record record = VRuska Engine_metrics_Record_init_default;
 
 	// Select which filed is used.
-	record.which_record = monado_metrics_Record_version_tag;
+	record.which_record = VRuska Engine_metrics_Record_version_tag;
 	record.record.version.major = major;
 	record.record.version.minor = minor;
 
@@ -143,13 +143,13 @@ u_metrics_write_session_frame(struct u_metrics_session_frame *umsf)
 		return;
 	}
 
-	monado_metrics_Record record = monado_metrics_Record_init_default;
+	VRuska Engine_metrics_Record record = VRuska Engine_metrics_Record_init_default;
 
 	// Select which filed is used.
-	record.which_record = monado_metrics_Record_session_frame_tag;
+	record.which_record = VRuska Engine_metrics_Record_session_frame_tag;
 
 #define COPY(_0, _1, _2, _3, FIELD, _4) (record.record.session_frame.FIELD = umsf->FIELD);
-	monado_metrics_SessionFrame_FIELDLIST(COPY, 0);
+	VRuska Engine_metrics_SessionFrame_FIELDLIST(COPY, 0);
 #undef COPY
 
 
@@ -163,13 +163,13 @@ u_metrics_write_used(struct u_metrics_used *umu)
 		return;
 	}
 
-	monado_metrics_Record record = monado_metrics_Record_init_default;
+	VRuska Engine_metrics_Record record = VRuska Engine_metrics_Record_init_default;
 
 	// Select which filed is used.
-	record.which_record = monado_metrics_Record_used_tag;
+	record.which_record = VRuska Engine_metrics_Record_used_tag;
 
 #define COPY(_0, _1, _2, _3, FIELD, _4) (record.record.used.FIELD = umu->FIELD);
-	monado_metrics_Used_FIELDLIST(COPY, 0);
+	VRuska Engine_metrics_Used_FIELDLIST(COPY, 0);
 #undef COPY
 
 
@@ -183,13 +183,13 @@ u_metrics_write_system_frame(struct u_metrics_system_frame *umsf)
 		return;
 	}
 
-	monado_metrics_Record record = monado_metrics_Record_init_default;
+	VRuska Engine_metrics_Record record = VRuska Engine_metrics_Record_init_default;
 
 	// Select which filed is used.
-	record.which_record = monado_metrics_Record_system_frame_tag;
+	record.which_record = VRuska Engine_metrics_Record_system_frame_tag;
 
 #define COPY(_0, _1, _2, _3, FIELD, _4) (record.record.system_frame.FIELD = umsf->FIELD);
-	monado_metrics_SystemFrame_FIELDLIST(COPY, 0);
+	VRuska Engine_metrics_SystemFrame_FIELDLIST(COPY, 0);
 #undef COPY
 
 
@@ -203,13 +203,13 @@ u_metrics_write_system_gpu_info(struct u_metrics_system_gpu_info *umgi)
 		return;
 	}
 
-	monado_metrics_Record record = monado_metrics_Record_init_default;
+	VRuska Engine_metrics_Record record = VRuska Engine_metrics_Record_init_default;
 
 	// Select which filed is used.
-	record.which_record = monado_metrics_Record_system_gpu_info_tag;
+	record.which_record = VRuska Engine_metrics_Record_system_gpu_info_tag;
 
 #define COPY(_0, _1, _2, _3, FIELD, _4) (record.record.system_gpu_info.FIELD = umgi->FIELD);
-	monado_metrics_SystemGpuInfo_FIELDLIST(COPY, 0);
+	VRuska Engine_metrics_SystemGpuInfo_FIELDLIST(COPY, 0);
 #undef COPY
 
 
@@ -223,13 +223,13 @@ u_metrics_write_system_present_info(struct u_metrics_system_present_info *umpi)
 		return;
 	}
 
-	monado_metrics_Record record = monado_metrics_Record_init_default;
+	VRuska Engine_metrics_Record record = VRuska Engine_metrics_Record_init_default;
 
 	// Select which filed is used.
-	record.which_record = monado_metrics_Record_system_present_info_tag;
+	record.which_record = VRuska Engine_metrics_Record_system_present_info_tag;
 
 #define COPY(_0, _1, _2, _3, FIELD, _4) (record.record.system_present_info.FIELD = umpi->FIELD);
-	monado_metrics_SystemPresentInfo_FIELDLIST(COPY, 0);
+	VRuska Engine_metrics_SystemPresentInfo_FIELDLIST(COPY, 0);
 #undef COPY
 
 

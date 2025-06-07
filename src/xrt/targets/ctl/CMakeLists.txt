@@ -1,11 +1,11 @@
 # Copyright 2020-2021, Collabora, Ltd.
 # SPDX-License-Identifier: BSL-1.0
 
-add_executable(monado-ctl main.c)
-add_sanitizers(monado-ctl)
+add_executable(VRuska Engine-ctl main.c)
+add_sanitizers(VRuska Engine-ctl)
 
-target_include_directories(monado-ctl PRIVATE ipc)
+target_include_directories(VRuska Engine-ctl PRIVATE ipc)
 
-target_link_libraries(monado-ctl PRIVATE aux_util ipc_client)
+target_link_libraries(VRuska Engine-ctl PRIVATE aux_util ipc_client)
 
-install(TARGETS monado-ctl RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+install(TARGETS VRuska Engine-ctl RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})

@@ -35,7 +35,7 @@
 #include "gui_window_record.h"
 #include "gui_widget_native_images.h"
 
-#include "imgui_monado/cimgui_monado.h"
+#include "imgui_VRuska Engine/cimgui_VRuska Engine.h"
 
 #include <float.h>
 
@@ -49,7 +49,7 @@
  * @defgroup gui_debug Debug GUI
  * @ingroup gui
  *
- * @brief GUI for live inspecting Monado.
+ * @brief GUI for live inspecting VRuska Engine.
  */
 
 /*!
@@ -66,7 +66,7 @@ struct debug_record
 };
 
 /*!
- * A GUI scene for debugging Monado while it is running, it uses the variable
+ * A GUI scene for debugging VRuska Engine while it is running, it uses the variable
  * tracking code in the @ref util/u_var.h file to provide live updates state.
  *
  * @implements gui_scene
@@ -905,7 +905,7 @@ curated_render(struct debug_scene *ds, struct gui_program *p)
 	}
 
 	// Start drawing.
-	igBegin("Monado", NULL, 0);
+	igBegin("VRuska Engine", NULL, 0);
 
 	// Top exit button.
 	ImVec2 button_dims = {48, 24};

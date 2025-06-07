@@ -53,7 +53,7 @@
 
 
 #ifndef LOG_ANDROID_TAG_PREFIX
-#define LOG_ANDROID_TAG_PREFIX "monado"
+#define LOG_ANDROID_TAG_PREFIX "VRuska Engine"
 #endif
 
 /*

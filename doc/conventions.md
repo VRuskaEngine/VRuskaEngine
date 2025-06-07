@@ -1,7 +1,7 @@
 # Code Style and Conventions {#conventions}
 
 <!--
-Copyright 2021-2022, Collabora, Ltd. and the Monado contributors
+Copyright 2021-2022, Collabora, Ltd. and the VRuska Engine contributors
 SPDX-License-Identifier: BSL-1.0
 -->
 
@@ -25,14 +25,14 @@ standards. Good guidelines to look to include the
 [Write Inclusive Documentation][] page from the Google developer documentation
 style guide. The latter also links to a word list for clear documentation,
 which, while not binding on this project, is useful in making sure your code,
-comments, and docs are understandable by the worldwide Monado community.
+comments, and docs are understandable by the worldwide VRuska Engine community.
 
 [Android Coding with Respect]: https://source.android.com/setup/contribute/respectful-code
 [Write Inclusive Documentation]: https://developers.google.com/style/inclusive-documentation
 
 ## Changelog fragments
 
-In Monado we strongly prefer if all MRs merged into the main Monado repository
+In VRuska Engine we strongly prefer if all MRs merged into the main VRuska Engine repository
 also includes changelog fragments. A changelog fragment is a small file
 detailing the changes in the MR on a per area basis. They are slightly more
 detailed then a commit subject line, but usually just one or two lines, usually
@@ -68,9 +68,9 @@ MR numbers are allocated when opened, also provides a nice readable separation
 between MRs in the git history. Examples for commits adding changelog fragments
 can be seen [here][example1], [here][example2] and [here][example3].
 
-[example1]: https://gitlab.freedesktop.org/monado/monado/-/commit/5e0f0866a6f74116acbc46c6e2447fdb8c716d02
-[example2]: https://gitlab.freedesktop.org/monado/monado/-/commit/98a5b18e0f90dab9f2ea5c2bbfd4ccd4998121c4
-[example3]: https://gitlab.freedesktop.org/monado/monado/-/commit/785e99f115df87dd4561fe6f88a7988b5834b650
+[example1]: https://gitlab.freedesktop.org/VRuska Engine/VRuska Engine/-/commit/5e0f0866a6f74116acbc46c6e2447fdb8c716d02
+[example2]: https://gitlab.freedesktop.org/VRuska Engine/VRuska Engine/-/commit/98a5b18e0f90dab9f2ea5c2bbfd4ccd4998121c4
+[example3]: https://gitlab.freedesktop.org/VRuska Engine/VRuska Engine/-/commit/785e99f115df87dd4561fe6f88a7988b5834b650
 [proclamation]: https://gitlab.com/proclamation/proclamation
 
 ## APIs
@@ -79,8 +79,8 @@ Internal APIs, when it makes sense, should be C APIs. Headers that define
 general communication interfaces between modules (not only use of utilities)
 belong in the `xrt/include/xrt` directory, and should not depend on any other module outside
 that directory. (As a historical note: this directory gets its name from a
-compressed version of the phrase "XR RunTime", a generic term for Monado and an
-early development codename. Also, it's shorter than `monado_` and so nicer to
+compressed version of the phrase "XR RunTime", a generic term for VRuska Engine and an
+early development codename. Also, it's shorter than `VRuska Engine_` and so nicer to
 use in code.)
 
 What follows are some basic API usage rules. Note that all the module usage
@@ -167,7 +167,7 @@ directed-acyclic-graph.
 
 ## Patterns and Idioms
 
-This is an incomplete list of conventional idioms used in the Monado codebase.
+This is an incomplete list of conventional idioms used in the VRuska Engine codebase.
 
 ### C "Inheritance" through first struct member
 

@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: BSL-1.0
 /*!
  * @file
- * @brief  A cli program to configure and test Monado.
+ * @brief  A cli program to configure and test VRuska Engine.
  * @author Jakob Bornecrantz <jakob@collabora.com>
  */
 
@@ -23,11 +23,11 @@ cli_print_help(int argc, const char **argv)
 		P("Unknown command '%s'\n\n", argv[1]);
 	}
 
-	P("Monado-CLI 0.0.1\n");
+	P("VRuska Engine-CLI 0.0.1\n");
 	P("Usage: %s command [options] [file]\n", argv[0]);
 	P("\n");
 	P("Commands:\n");
-	P("  info       - Print information about Monado and the system, for bug reporting.\n");
+	P("  info       - Print information about VRuska Engine and the system, for bug reporting.\n");
 	P("  test       - List found devices, for prober testing.\n");
 	P("  probe      - Just probe and then exit.\n");
 	P("  lighthouse - Control the power of lighthouses [on|off].\n");

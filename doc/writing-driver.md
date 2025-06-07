@@ -1,7 +1,7 @@
 # Writing a new driver {#writing-driver}
 
 <!--
-Copyright 2018-2021, Collabora, Ltd. and the Monado contributors
+Copyright 2018-2021, Collabora, Ltd. and the VRuska Engine contributors
 SPDX-License-Identifier: BSL-1.0
 -->
 
@@ -10,7 +10,7 @@ SPDX-License-Identifier: BSL-1.0
 The components you will be interacting with is @ref st_prober to find the
 hardware devices and setup a working system, along with the @ref aux code that
 provides various helpers. You will actually be implementing the @ref xrt_device
-interface by writing a driver. It is convention in Monado for interfaces to
+interface by writing a driver. It is convention in VRuska Engine for interfaces to
 allow full, complete control of anything a device might want to modify/control,
 and to provide helper functionality in @ref aux to simplify implementation of
 the most common cases.
@@ -84,13 +84,13 @@ detection of an HMD based on the USB HID for its IMU.
 
 Either way, your device's detection details will need to be added to a list used
 by the prober at @ref xrt_instance startup time. The stock lists for mainline
-Monado are in `src/xrt/targets/common/target_lists.c`. These are shared by the
+VRuska Engine are in `src/xrt/targets/common/target_lists.c`. These are shared by the
 various targets (OpenXR runtime shared library, service executable, utility
-executables) also found in `src/xrt/targets`. If you're using Monado as a
+executables) also found in `src/xrt/targets`. If you're using VRuska Engine as a
 toolkit or component rather than as a standalone runtime and service, you can
 replicate whatever portions of the target lists in your own target, or directly
 implement the @ref xrt_instance interface more directly, linking in only those
-drivers and components you need. **Note**, however, that Monado is intended to
+drivers and components you need. **Note**, however, that VRuska Engine is intended to
 not expose any external API other than the OpenXR API: the @ref xrt_iface are
 subject to change as required so those writing drivers or other software on
 those interfaces are encouraged to upstream as much as possible to minimize

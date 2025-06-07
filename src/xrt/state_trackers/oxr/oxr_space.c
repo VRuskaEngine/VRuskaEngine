@@ -224,7 +224,7 @@ oxr_space_reference_create(struct oxr_logger *log,
 	spc->space_type = oxr_type;
 	memcpy(&spc->pose, &createInfo->poseInReferenceSpace, sizeof(spc->pose));
 
-	// Reference the reference space, if not supported by Monado just skip.
+	// Reference the reference space, if not supported by VRuska Engine just skip.
 	if (xtype != XRT_SPACE_REFERENCE_TYPE_INVALID) {
 		xrt_space_overseer_ref_space_inc(sess->sys->xso, xtype);
 	}

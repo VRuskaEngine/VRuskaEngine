@@ -46,8 +46,8 @@ struct comp_window_mswin
 	bool thread_exited;
 };
 
-static WCHAR szWindowClass[] = L"Monado";
-static WCHAR szWindowData[] = L"MonadoWindow";
+static WCHAR szWindowClass[] = L"VRuska Engine";
+static WCHAR szWindowData[] = L"VRuska EngineWindow";
 
 #define COMP_ERROR_GETLASTERROR(C, MSG_WITH_PLACEHOLDER, MSG_WITHOUT_PLACEHOLDER)                                      \
 	do {                                                                                                           \
@@ -205,7 +205,7 @@ comp_window_mswin_window_loop(struct comp_window_mswin *cwm)
 
 	COMP_INFO(ct->c, "Creating window");
 	cwm->window =
-	    CreateWindowExW(0, szWindowClass, L"Monado (Windowed)", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT,
+	    CreateWindowExW(0, szWindowClass, L"VRuska Engine (Windowed)", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT,
 	                    rc.right - rc.left, rc.bottom - rc.top, NULL, NULL, cwm->instance, NULL);
 	if (cwm->window == NULL) {
 		COMP_ERROR_GETLASTERROR(ct->c, "Failed to create window: %s", "Failed to create window");

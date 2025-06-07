@@ -12,25 +12,25 @@ We are using the same basic approach to Windows CI building as Mesa, just as we
 do on Linux. See
 <https://gitlab.freedesktop.org/mesa/mesa/-/tree/main/.gitlab-ci/windows> for
 the details there. The following is the Mesa readme, lightly modified to fit
-Monado.
+VRuska Engine.
 
 Unlike Linux, Windows cannot reuse the freedesktop ci-templates as they exist
 as we do not have Podman, Skopeo, or even Docker-in-Docker builds available
 under Windows.
 
 We still reuse the same model: build a base container with the core operating
-system and infrequently-changed build dependencies, then execute Monado builds
+system and infrequently-changed build dependencies, then execute VRuska Engine builds
 only inside that base container. This is open-coded in PowerShell scripts.
 
 ## Base container build
 
-The base container build jobs execute the `monado_container.ps1` script which
+The base container build jobs execute the `VRuska Engine_container.ps1` script which
 reproduces the ci-templates behaviour. It looks for the registry image in
 the user's namespace, and exits if found. If not found, it tries to copy
-the same image tag from the upstream Monado repository. If that is not found,
+the same image tag from the upstream VRuska Engine repository. If that is not found,
 the image is rebuilt inside the user's namespace.
 
-The rebuild executes `docker build` which calls `monado_deps_*.ps1` inside the
+The rebuild executes `docker build` which calls `VRuska Engine_deps_*.ps1` inside the
 container to fetch and install all build dependencies. This includes Visual
 Studio Build Tools (downloaded from Microsoft, under the license which
 allows use by open-source projects), and other build tools from Scoop.
@@ -39,10 +39,10 @@ allows use by open-source projects), and other build tools from Scoop.
 This job is executed inside a Windows shell environment directly inside the
 host, without Docker.
 
-## Monado build
+## VRuska Engine build
 
-The Monado build runs inside the base container, executing `mesa_build.ps1`.
-This simply compiles Monado using CMake and Ninja, executing the build and
+The VRuska Engine build runs inside the base container, executing `mesa_build.ps1`.
+This simply compiles VRuska Engine using CMake and Ninja, executing the build and
 unit tests.
 
 ## Local testing

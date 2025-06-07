@@ -26,7 +26,7 @@
 #include <string.h>
 #include <linux/input.h>
 
-#define WINDOW_TITLE "Monado"
+#define WINDOW_TITLE "VRuska Engine"
 
 /*
  *

@@ -480,7 +480,7 @@ ns_hmd_create(const cJSON *config_json)
 	ns->no_tracker_relation.relation_flags = (enum xrt_space_relation_flags)(
 	    XRT_SPACE_RELATION_ORIENTATION_VALID_BIT | XRT_SPACE_RELATION_POSITION_VALID_BIT |
 	    XRT_SPACE_RELATION_ORIENTATION_TRACKED_BIT);
-	// Appeases the inner workings of Monado for when there's no head tracker and we're giving a fake pose through
+	// Appeases the inner workings of VRuska Engine for when there's no head tracker and we're giving a fake pose through
 	// the debug gui
 	ns->base.supported.orientation_tracking = true;
 	ns->base.supported.position_tracking = true;

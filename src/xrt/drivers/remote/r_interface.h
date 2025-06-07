@@ -11,7 +11,7 @@
 
 // winsock2.h must be included before windows.h, or the winsock interface will be
 // defined instead of the winsock2 interface.
-// Given that some of the Monado headers could include windows.h, winsock2 is to be
+// Given that some of the VRuska Engine headers could include windows.h, winsock2 is to be
 // included before anything else.
 // As a consequence, this header must also be the first included in the file using
 // it.

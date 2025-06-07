@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: BSL-1.0
 /*!
  * @file
- * @brief  Interface to the Monado SteamVR Driver exporter.
+ * @brief  Interface to the VRuska Engine SteamVR Driver exporter.
  * @author Jakob Bornecrantz <jakob@collabora.com>
  * @ingroup st_ovrd
  */

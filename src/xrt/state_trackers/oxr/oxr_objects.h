@@ -933,7 +933,7 @@ oxr_space_reference_create(struct oxr_logger *log,
                            struct oxr_space **out_space);
 
 /*!
- * Monado special space that always points to a specific @ref xrt_device and
+ * VRuska Engine special space that always points to a specific @ref xrt_device and
  * pose, useful when you want to bypass the action binding system for instance.
  */
 XrResult
@@ -2070,7 +2070,7 @@ struct oxr_binding
  * value and a hash map: specifically, we look up the
  * oxr_action_set::act_set_key and oxr_action::act_key in the session.
  *
- * ![](monado-input-class-relationships.drawio.svg)
+ * ![](VRuska Engine-input-class-relationships.drawio.svg)
  */
 
 /*!

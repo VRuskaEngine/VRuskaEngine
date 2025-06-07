@@ -1,7 +1,7 @@
 # IPC Design and Implementation {#ipc-design}
 
 <!--
-Copyright 2021-2022, Collabora, Ltd. and the Monado contributors
+Copyright 2021-2022, Collabora, Ltd. and the VRuska Engine contributors
 SPDX-License-Identifier: BSL-1.0
 -->
 
@@ -34,7 +34,7 @@ specific way each need is met is highlighted below.
 
 ## Linux Platform Details
 
-In an typical Linux environment, the Monado service can be launched one of two
+In an typical Linux environment, the VRuska Engine service can be launched one of two
 ways: manually, or by socket activation (e.g. from systemd). In either case,
 there is a Unix domain socket with a well-known name (known at compile time, and
 built-in to both the service executable and the client shared library) used by
@@ -55,7 +55,7 @@ descriptor to the client, so it has (read) access to this data.
 ## Android Platform Details
 
 On Android, to pass platform objects, allow for service activation, and
-fit better within the idioms of the platform, Monado provides a Binder/AIDL
+fit better within the idioms of the platform, VRuska Engine provides a Binder/AIDL
 service instead of a named socket. (The named sockets we typically use are not
 permitted by the platform, and "abstract" named sockets are currently available,
 but are not idiomatic for the platform and lack other useful capabilities.)
@@ -73,7 +73,7 @@ expose it, and since the AIDL service is used for so little, mixing languages
 did not make sense.
 
 The service we expose provides an implementation of our AIDL-described
-interface, `org.freedesktop.monado.ipc.IMonado`. This can be modified freely, as
+interface, `org.freedesktop.VRuska Engine.ipc.IVRuska Engine`. This can be modified freely, as
 both the client and server are built at the same time and packaged in the same
 APK, even though they get loaded in different processes.
 
@@ -89,9 +89,9 @@ The first main purpose of this service is for automatic startup and the
 the service. The Android framework takes care of launching the service process
 when the client requests to bind our service by name and package. The framework
 also provides us with method calls when we're bound. In this way, the "entry point"
-of the Monado service on Android is the
-`org.freedesktop.monado.ipc.MonadoService` class, which exposes the
-implementation of our AIDL interface, `org.freedesktop.monado.ipc.MonadoImpl`.
+of the VRuska Engine service on Android is the
+`org.freedesktop.VRuska Engine.ipc.VRuska EngineService` class, which exposes the
+implementation of our AIDL interface, `org.freedesktop.VRuska Engine.ipc.VRuska EngineImpl`.
 
 From there, the native-code mainloop starts when this service received a valid
 `Surface`. By default, the JVM code will signal the mainloop to shut down a short
@@ -146,7 +146,7 @@ We have the following design goals/constraints:
   - This might mean we want to do it all without JNI on the main thread.
 - The client should know (and be unblocked) when the server has accepted its
   connection.
-  - This suggests that the method called in `MonadoImpl` should block until the
+  - This suggests that the method called in `VRuska EngineImpl` should block until the
     server consumes/accepts the connection.
   - Not 100% sure this is required, but maybe.
 - Resources (file descriptors, etc) should not be leaked.

@@ -9,7 +9,7 @@
  * Some notes:
  * These functions should return exactly the same values as basalt-headers, down to floating point bits.
  *
- * They were mainly written as an expedient way to stop depending on OpenCV-based (un)projection code in Monado's hand
+ * They were mainly written as an expedient way to stop depending on OpenCV-based (un)projection code in VRuska Engine's hand
  * tracking code, and to encourage compiler optimizations through inlining.
  *
  * Current users:

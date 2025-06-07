@@ -252,7 +252,7 @@ oxr_instance_create(struct oxr_logger *log,
 
 #ifdef XRT_FEATURE_CLIENT_DEBUG_GUI
 	struct u_debug_gui_create_info udgci = {
-	    .window_title = "Monado! ✨⚡🔥",
+	    .window_title = "VRuska Engine! ✨⚡🔥",
 	    .open = U_DEBUG_GUI_OPEN_AUTO,
 	};
 
@@ -336,7 +336,7 @@ oxr_instance_create(struct oxr_logger *log,
 
 
 	/*
-	 * Monado initialisation.
+	 * VRuska Engine initialisation.
 	 */
 
 	xret = xrt_instance_create(&i_info, &inst->xinst);

@@ -1,7 +1,7 @@
-# Vulkan extensions used by Monado {#vulkan-extensions}
+# Vulkan extensions used by VRuska Engine {#vulkan-extensions}
 
 <!--
-Copyright 2020, Collabora, Ltd. and the Monado contributors
+Copyright 2020, Collabora, Ltd. and the VRuska Engine contributors
 SPDX-License-Identifier: BSL-1.0
 -->
 

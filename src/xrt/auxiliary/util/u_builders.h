@@ -75,7 +75,7 @@ struct u_builder_search_results
 
 /*!
  * This small helper struct is for @ref u_builder_roles_helper_open_system,
- * lets a builder focus on opening devices rather then dealing with Monado
+ * lets a builder focus on opening devices rather then dealing with VRuska Engine
  * structs like @ref xrt_system_devices and the like.
  *
  * @ingroup aux_util

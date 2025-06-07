@@ -66,8 +66,8 @@ endif()
 # Nano Protobuf
 add_library(
 	xrt-external-nanopb STATIC
-	nanopb/monado_metrics.pb.c
-	nanopb/monado_metrics.pb.h
+	nanopb/VRuska Engine_metrics.pb.c
+	nanopb/VRuska Engine_metrics.pb.h
 	nanopb/pb.h
 	nanopb/pb_common.c
 	nanopb/pb_common.h
@@ -149,7 +149,7 @@ if(XRT_HAVE_OPENGL)
 		# cimplot 439f705b1cfae0e9fbe42c13ab5b45becc47d404
 		imgui/cimplot/cimplot.cpp
 		imgui/cimplot/cimplot.h
-		imgui/imgui_monado/imgui_monado.cpp
+		imgui/imgui_VRuska Engine/imgui_VRuska Engine.cpp
 		)
 
 	target_include_directories(

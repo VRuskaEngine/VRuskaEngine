@@ -134,7 +134,7 @@ struct vive_tracking_status
 	bool slam_supported;
 	bool slam_enabled;
 
-	//! Has Monado been built with the correct libraries to do optical hand tracking?
+	//! Has VRuska Engine been built with the correct libraries to do optical hand tracking?
 	bool hand_supported;
 
 	//! Did we find controllers?

@@ -60,7 +60,7 @@ struct u_debug_gui_create_info
  * It is safe to call the other functions with a NULL @p debug_gui argument.
  *
  * The window will be disabled and 0 returned if:
- * * Monado was compiled without the needed dependencies, like SDL.
+ * * VRuska Engine was compiled without the needed dependencies, like SDL.
  * * The @p open field on the info struct set to NEVER.
  * * The XRT_DEBUG_GUI env variable is false (or unset).
  *

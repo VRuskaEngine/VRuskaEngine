@@ -2,11 +2,11 @@
 # SPDX-License-Identifier: BSL-1.0
 
 ######
-# Create a small SDL2 based GUI for Monado.
+# Create a small SDL2 based GUI for VRuska Engine.
 
 add_executable(gui gui_sdl2.c gui_sdl2_imgui.c gui_sdl2_main.c)
 
-set_target_properties(gui PROPERTIES OUTPUT_NAME monado-gui PREFIX "")
+set_target_properties(gui PROPERTIES OUTPUT_NAME VRuska Engine-gui PREFIX "")
 add_sanitizers(gui)
 
 target_link_libraries(

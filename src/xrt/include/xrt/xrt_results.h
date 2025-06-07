@@ -10,7 +10,7 @@
 #pragma once
 
 /*!
- * Result type used across Monado.
+ * Result type used across VRuska Engine.
  *
  * 0 is @ref XRT_SUCCESS, positive values are "special" non-error return codes (like timeout), negative values are
  * errors.
@@ -102,7 +102,7 @@ typedef enum xrt_result
 	XRT_ERROR_MULTI_SESSION_NOT_IMPLEMENTED = -11,
 
 	/*!
-	 * The requested format is not supported by Monado.
+	 * The requested format is not supported by VRuska Engine.
 	 */
 	XRT_ERROR_SWAPCHAIN_FORMAT_UNSUPPORTED = -12,
 

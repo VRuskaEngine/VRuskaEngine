@@ -293,7 +293,7 @@ u_ns_polyval2d(float X, float Y, float C[16])
 bool
 u_compute_distortion_ns_p2d(struct u_ns_p2d_values *values, int view, float u, float v, struct xrt_uv_triplet *result)
 {
-	// I think that OpenCV and Monado have different definitions of v coordinates, but not sure. if not,
+	// I think that OpenCV and VRuska Engine have different definitions of v coordinates, but not sure. if not,
 	// unexplainable
 	v = 1.0f - v;
 

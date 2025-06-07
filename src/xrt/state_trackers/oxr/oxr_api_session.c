@@ -831,7 +831,7 @@ oxr_xrCreatePlaneDetectorEXT(XrSession session,
 	}
 
 	if (createInfo->flags != 0 && createInfo->flags != XR_PLANE_DETECTOR_ENABLE_CONTOUR_BIT_EXT) {
-		//! @todo: Disabled to allow Monado forks with internal extensions to have more values.
+		//! @todo: Disabled to allow VRuska Engine forks with internal extensions to have more values.
 		return oxr_error(&log, XR_ERROR_VALIDATION_FAILURE, "Invalid plane detector creation flags: %lx",
 		                 createInfo->flags);
 	}

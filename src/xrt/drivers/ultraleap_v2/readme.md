@@ -1,4 +1,4 @@
-# About Monado's UltraLeap driver
+# About VRuska Engine's UltraLeap driver
 
 <!--
 Copyright 2021, Moshi Turner
@@ -22,12 +22,12 @@ a systemd service.
 Presumably, you're using this driver because you want to stick the Leap Motion
 Controller on the front of your HMD and have it track your hands.
 
-If you don't have a config file at `~/.config/monado/config_v0.json` (or
+If you don't have a config file at `~/.config/VRuska Engine/config_v0.json` (or
 wherever you set `XDG_CONFIG_DIR`), your tracked hands will show up near the
 tracking origin and not move around with your HMD, which is probably not what
 you want.
 
-Instead you probably want to configure Monado to make your Leap Motion
+Instead you probably want to configure VRuska Engine to make your Leap Motion
 Controller-tracked hands follow around your HMD. There's an example of how to do
 this with North Star in `doc/example_configs/config_v0.northstar_lonestar.json`.
 If you're using a North Star headset, that should work but unless you're using

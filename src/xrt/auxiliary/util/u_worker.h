@@ -59,7 +59,7 @@ void
 u_worker_thread_pool_destroy(struct u_worker_thread_pool *uwtp);
 
 /*!
- * Standard Monado reference function.
+ * Standard VRuska Engine reference function.
  *
  * @ingroup aux_util
  */
@@ -144,7 +144,7 @@ void
 u_worker_group_destroy(struct u_worker_group *uwg);
 
 /*!
- * Standard Monado reference function.
+ * Standard VRuska Engine reference function.
  *
  * @ingroup aux_util
  */

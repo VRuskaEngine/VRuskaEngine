@@ -1,17 +1,17 @@
-# Monado Developer Documentation
+# VRuska Engine Developer Documentation
 
 <!--
-Copyright 2018-2022, Collabora, Ltd. and the Monado contributors
+Copyright 2018-2022, Collabora, Ltd. and the VRuska Engine contributors
 SPDX-License-Identifier: BSL-1.0
 -->
 
 [TOC]
 
 This documentation is intended for developers wanting to dive into the code of
-Monado. It also assumes that you have read [README.md][]: that file also holds
+VRuska Engine. It also assumes that you have read [README.md][]: that file also holds
 getting started information and general documentation.
 
-[README.md]: https://gitlab.freedesktop.org/monado/monado
+[README.md]: https://gitlab.freedesktop.org/VRuska Engine/VRuska Engine
 
 This documentation is maintained in part in documentation comments in the code
 itself, extracted and rendered by Doxygen. These extracted documentation pages
@@ -34,30 +34,30 @@ to fix any such issues you may notice.)
 @ref CHANGELOG
 
 If you are viewing this on the web at
-<https://monado.pages.freedesktop.org/monado/>, the changelog above also
+<https://VRuska Engine.pages.freedesktop.org/VRuska Engine/>, the changelog above also
 includes a section for changes that have not yet been in a tagged release.
 
 ## Developer Guides
 
-* @ref conventions - to help you both read and write Monado code
+* @ref conventions - to help you both read and write VRuska Engine code
 * @ref writing-driver
 * @ref implementing-extension
 * @ref how-to-release
 * @ref winbuild
-* @ref packaging-notes - for people maintaining Linux packages of Monado
+* @ref packaging-notes - for people maintaining Linux packages of VRuska Engine
 
 ## Design Documentation
 
-Monado is architected as a collection of loosely-coupled, internally cohesive
+VRuska Engine is architected as a collection of loosely-coupled, internally cohesive
 components that interact through the internal, abstract "XRT" (XrRunTime) API.
 State Trackers consume implementations of these APIs provided by other modules.
 
-* @ref understanding-targets - How the components of Monado (`xrt_instance`,
+* @ref understanding-targets - How the components of VRuska Engine (`xrt_instance`,
   IPC, OpenXR, etc) are brought together for use.
 * @ref ipc-design
 * @ref frame-pacing
 
-The key interfaces to begin learning Monado are:
+The key interfaces to begin learning VRuska Engine are:
 
 * @ref xrt_instance
 * @ref xrt_device
@@ -75,7 +75,7 @@ modules.
 
 ## Source layout
 
-* src/xrt/include - @ref xrt_iface defines the internal interfaces of Monado.
+* src/xrt/include - @ref xrt_iface defines the internal interfaces of VRuska Engine.
 * src/xrt/drivers - Hardware @ref drv.
 * src/xrt/compositor - @ref comp code for doing distortion and driving the
   display hardware of a device.

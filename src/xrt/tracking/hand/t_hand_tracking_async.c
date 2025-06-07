@@ -58,7 +58,7 @@ struct ht_async_impl
 	// in here:
 	// mutex is so that the mainloop and two push_frames don't fight over referencing frames;
 	// cond is so that we can wake up the mainloop at certain times;
-	// running is so we can stop the thread when Monado exits
+	// running is so we can stop the thread when VRuska Engine exits
 	struct os_thread_helper mainloop;
 
 	volatile bool hand_tracking_work_active;

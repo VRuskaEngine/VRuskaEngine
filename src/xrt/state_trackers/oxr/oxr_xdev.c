@@ -181,7 +181,7 @@ oxr_xdev_list_create(struct oxr_logger *log,
 	xdl->device_count = count;
 	xdl->sess = sess;
 
-	//! @todo Always the first generation, Monado doesn't have hotplug (yet).
+	//! @todo Always the first generation, VRuska Engine doesn't have hotplug (yet).
 	xdl->generation_number = 1;
 
 	*out_xdl = xdl;

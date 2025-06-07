@@ -25,9 +25,9 @@ add_library(
 	android_load_class.hpp
 	android_looper.cpp
 	android_looper.h
-	org.freedesktop.monado.auxiliary.cpp
-	org.freedesktop.monado.auxiliary.hpp
-	org.freedesktop.monado.auxiliary.impl.hpp
+	org.freedesktop.VRuska Engine.auxiliary.cpp
+	org.freedesktop.VRuska Engine.auxiliary.hpp
+	org.freedesktop.VRuska Engine.auxiliary.impl.hpp
 	)
 target_link_libraries(
 	aux_android

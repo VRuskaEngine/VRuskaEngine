@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: BSL-1.0
 /*!
  * @file
- * @brief  Interface of libmonado
+ * @brief  Interface of libVRuska Engine
  * @author Jakob Bornecrantz <jakob@collabora.com>
  * @author Rylie Pavlik <rylie.pavlik@collabora.com>
  */
@@ -81,7 +81,7 @@ typedef enum mnd_property
 } mnd_property_t;
 
 /*!
- * Opaque type for libmonado state
+ * Opaque type for libVRuska Engine state
  */
 typedef struct mnd_root mnd_root_t;
 
@@ -119,7 +119,7 @@ typedef enum mnd_reference_space_type
  */
 
 /*!
- * Returns the version of the API (not Monado itself), follows the versioning
+ * Returns the version of the API (not VRuska Engine itself), follows the versioning
  * semantics of https://semver.org/ standard. In short if the major version
  * mismatch then the interface is incompatible.
  *
@@ -133,7 +133,7 @@ void
 mnd_api_get_version(uint32_t *out_major, uint32_t *out_minor, uint32_t *out_patch);
 
 /*!
- * Create libmonado state and connect to service
+ * Create libVRuska Engine state and connect to service
  *
  * @param[out] out_root Address to populate with the opaque state type.
  * @return MND_SUCCESS on success
@@ -142,10 +142,10 @@ mnd_result_t
 mnd_root_create(mnd_root_t **out_root);
 
 /*!
- * Destroy libmonado state, disconnecting from the service, and zeroing the
+ * Destroy libVRuska Engine state, disconnecting from the service, and zeroing the
  * pointer.
  *
- * @param root_ptr Pointer to your libmonado state. Null-checked, will be set to null.
+ * @param root_ptr Pointer to your libVRuska Engine state. Null-checked, will be set to null.
  */
 void
 mnd_root_destroy(mnd_root_t **root_ptr);
@@ -153,7 +153,7 @@ mnd_root_destroy(mnd_root_t **root_ptr);
 /*!
  * Update our local cached copy of the client list
  *
- * @param root The libmonado state.
+ * @param root The libVRuska Engine state.
  * @return MND_SUCCESS on success
  */
 mnd_result_t
@@ -164,7 +164,7 @@ mnd_root_update_client_list(mnd_root_t *root);
  *
  * This value only changes on calls to @ref mnd_root_update_client_list
  *
- * @param root         The libmonado state.
+ * @param root         The libVRuska Engine state.
  * @param[out] out_num Pointer to value to populate with the number of clients.
  *
  * @pre Called @ref mnd_root_update_client_list at least once
@@ -177,7 +177,7 @@ mnd_root_get_number_clients(mnd_root_t *root, uint32_t *out_num);
 /*!
  * Get the id from the current client list.
  *
- * @param root               The libmonado state.
+ * @param root               The libVRuska Engine state.
  * @param index              Index to retrieve id for.
  * @param[out] out_client_id Pointer to value to populate with the id at the given index.
  */
@@ -187,9 +187,9 @@ mnd_root_get_client_id_at_index(mnd_root_t *root, uint32_t index, uint32_t *out_
 /*!
  * Get the name of the client at the given index.
  *
- * The string returned is only valid until the next call into libmonado.
+ * The string returned is only valid until the next call into libVRuska Engine.
  *
- * @param root          The libmonado state.
+ * @param root          The libVRuska Engine state.
  * @param client_id     ID of client to retrieve name from.
  * @param[out] out_name Pointer to populate with the client name.
  *
@@ -205,7 +205,7 @@ mnd_root_get_client_name(mnd_root_t *root, uint32_t client_id, const char **out_
  *
  * This result only changes on calls to @ref mnd_root_update_client_list
  *
- * @param root           The libmonado state.
+ * @param root           The libVRuska Engine state.
  * @param client_id      ID of client to retrieve flags from.
  * @param[out] out_flags Pointer to populate with the flags, a bitwise combination of @ref mnd_client_flags.
  *
@@ -219,7 +219,7 @@ mnd_root_get_client_state(mnd_root_t *root, uint32_t client_id, uint32_t *out_fl
 /*!
  * Set the client at the given index as "primary".
  *
- * @param root      The libmonado state.
+ * @param root      The libVRuska Engine state.
  * @param client_id ID of the client set as primary.
  *
  * @pre Called @ref mnd_root_update_client_list at least once
@@ -232,7 +232,7 @@ mnd_root_set_client_primary(mnd_root_t *root, uint32_t client_id);
 /*!
  * Set the client at the given index as "focused".
  *
- * @param root      The libmonado state.
+ * @param root      The libVRuska Engine state.
  * @param client_id ID of the client set as focused.
  *
  * @pre Called @ref mnd_root_update_client_list at least once
@@ -245,7 +245,7 @@ mnd_root_set_client_focused(mnd_root_t *root, uint32_t client_id);
 /*!
  * Toggle io activity for the client at the given index.
  *
- * @param root      The libmonado state.
+ * @param root      The libVRuska Engine state.
  * @param client_id ID of the client to toggle IO for.
  *
  * @pre Called @ref mnd_root_update_client_list at least once
@@ -258,7 +258,7 @@ mnd_root_toggle_client_io_active(mnd_root_t *root, uint32_t client_id);
 /*!
  * Get the number of devices
  *
- * @param root                  The libmonado state.
+ * @param root                  The libVRuska Engine state.
  * @param[out] out_device_count Pointer to value to populate with the number of devices.
  *
  * @return MND_SUCCESS on success
@@ -271,7 +271,7 @@ mnd_root_get_device_count(mnd_root_t *root, uint32_t *out_device_count);
  *
  * Supported in version 1.2 and above.
  *
- * @param root          The libmonado state.
+ * @param root          The libVRuska Engine state.
  * @param device_index  Index of device to retrieve name from.
  * @param prop          A boolean property enum.
  * @param[out] out_bool Pointer to populate with the boolean.
@@ -286,7 +286,7 @@ mnd_root_get_device_info_bool(mnd_root_t *root, uint32_t device_index, mnd_prope
  *
  * Supported in version 1.2 and above.
  *
- * @param root         The libmonado state.
+ * @param root         The libVRuska Engine state.
  * @param device_index Index of device to retrieve name from.
  * @param prop         A int32_t property enum.
  * @param[out] out_i32 Pointer to populate with the int32_t.
@@ -301,7 +301,7 @@ mnd_root_get_device_info_i32(mnd_root_t *root, uint32_t device_index, mnd_proper
  *
  * Supported in version 1.2 and above.
  *
- * @param root          The libmonado state.
+ * @param root          The libVRuska Engine state.
  * @param device_index  Index of device to retrieve name from.
  * @param prop          A uint32_t property enum.
  * @param[out] out_u32 Pointer to populate with the uint32_t.
@@ -316,7 +316,7 @@ mnd_root_get_device_info_u32(mnd_root_t *root, uint32_t device_index, mnd_proper
  *
  * Supported in version 1.2 and above.
  *
- * @param root           The libmonado state.
+ * @param root           The libVRuska Engine state.
  * @param device_index   Index of device to retrieve name from.
  * @param prop           A float property enum.
  * @param[out] out_float Pointer to populate with the float.
@@ -331,7 +331,7 @@ mnd_root_get_device_info_float(mnd_root_t *root, uint32_t device_index, mnd_prop
  *
  * Supported in version 1.2 and above.
  *
- * @param root            The libmonado state.
+ * @param root            The libVRuska Engine state.
  * @param device_index    Index of device to retrieve name from.
  * @param prop            A string property enum.
  * @param[out] out_string Pointer to populate with the string.
@@ -346,7 +346,7 @@ mnd_root_get_device_info_string(mnd_root_t *root, uint32_t device_index, mnd_pro
  *
  * @deprecated Deprecated in version 1.2, scheduled for removal in version 2.0.0 currently.
  *
- * @param root               The libmonado state.
+ * @param root               The libVRuska Engine state.
  * @param device_index       Index of device to retrieve name from.
  * @param[out] out_device_id Pointer to value to populate with the device id at the given index.
  * @param[out] out_dev_name  Pointer to populate with the device name.
@@ -359,7 +359,7 @@ mnd_root_get_device_info(mnd_root_t *root, uint32_t device_index, uint32_t *out_
 /*!
  * Get the device index associated for a given role name.
  *
- * @param root           The libmonado state.
+ * @param root           The libVRuska Engine state.
  * @param role_name      Name of the role, one-of: "head", "left", "right",
  *                       "gamepad", "eyes", "hand-tracking-left", and,
  *                       "hand-tracking-right":
@@ -376,7 +376,7 @@ mnd_root_get_device_from_role(mnd_root_t *root, const char *role_name, int32_t *
  *
  * Supported in version 1.1 and above.
  *
- * @param root The libmonado state.
+ * @param root The libVRuska Engine state.
  *
  * @return MND_SUCCESS on success
  */
@@ -388,7 +388,7 @@ mnd_root_recenter_local_spaces(mnd_root_t *root);
  *
  * Supported in version 1.3 and above.
  *
- * @param root The libmonado state.
+ * @param root The libVRuska Engine state.
  * @param type The reference space.
  * @param offset A pointer to where the offset should be written.
  *
@@ -402,7 +402,7 @@ mnd_root_get_reference_space_offset(mnd_root_t *root, mnd_reference_space_type_t
  *
  * Supported in version 1.3 and above.
  *
- * @param root The libmonado state.
+ * @param root The libVRuska Engine state.
  * @param type The reference space.
  * @param offset A pointer to valid xrt_pose.
  *
@@ -416,7 +416,7 @@ mnd_root_set_reference_space_offset(mnd_root_t *root, mnd_reference_space_type_t
  *
  * Supported in version 1.3 and above.
  *
- * @param root The libmonado state.
+ * @param root The libVRuska Engine state.
  * @param origin_id The ID of the tracking origin.
  * @param offset A pointer to where the offset should be written.
  *
@@ -430,7 +430,7 @@ mnd_root_get_tracking_origin_offset(mnd_root_t *root, uint32_t origin_id, mnd_po
  *
  * Supported in version 1.3 and above.
  *
- * @param root The libmonado state.
+ * @param root The libVRuska Engine state.
  * @param origin_id The ID of the tracking origin.
  * @param offset A pointer to valid xrt_pose.
  *
@@ -444,7 +444,7 @@ mnd_root_set_tracking_origin_offset(mnd_root_t *root, uint32_t origin_id, const 
  *
  * Supported in version 1.3 and above.
  *
- * @param root The libmonado state.
+ * @param root The libVRuska Engine state.
  * @param out_track_count Pointer to where the count should be written.
  *
  * @return MND_SUCCESS on success
@@ -457,7 +457,7 @@ mnd_root_get_tracking_origin_count(mnd_root_t *root, uint32_t *out_track_count);
  *
  * Supported in version 1.3 and above.
  *
- * @param root The libmonado state.
+ * @param root The libVRuska Engine state.
  * @param origin_id The ID of a tracking origin.
  * @param out_string The pointer to write the name's pointer to.
  *
@@ -469,7 +469,7 @@ mnd_root_get_tracking_origin_name(mnd_root_t *root, uint32_t origin_id, const ch
 /*!
  * Get battery status of a device.
  *
- * @param root               The libmonado state.
+ * @param root               The libVRuska Engine state.
  * @param device_index       Index of device to retrieve battery info from.
  * @param[out] out_present   Pointer to value to populate with whether the device provides battery status info.
  * @param[out] out_charging  Pointer to value to populate with whether the device is currently being charged.

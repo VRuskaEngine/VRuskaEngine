@@ -14,7 +14,7 @@
  * @defgroup ipc Inter-Process Communication
  * @ingroup xrt
  *
- * @brief Inter-Process Communication layer for Monado.
+ * @brief Inter-Process Communication layer for VRuska Engine.
  */
 
 /*!

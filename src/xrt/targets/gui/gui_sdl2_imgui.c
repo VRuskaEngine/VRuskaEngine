@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: BSL-1.0
 /*!
  * @file
- * @brief  Main entrypoint for the Monado GUI program.
+ * @brief  Main entrypoint for the VRuska Engine GUI program.
  * @author Jakob Bornecrantz <jakob@collabora.com>
  * @ingroup gui
  */

@@ -37,7 +37,7 @@ struct u_pacing_compositor;
  * @brief A non-rendering alternate for the main compositor that still can
  * support applications fully.
  *
- * Monado's design is highly modular, including allowing alternate compositors to
+ * VRuska Engine's design is highly modular, including allowing alternate compositors to
  * be used. If you are looking to write an additional or alternate compositor to
  * the one in `src/xrt/compositor/main`, this code is your starting point. It is
  * the basic implementation of @ref xrt_compositor_native extracted from there,

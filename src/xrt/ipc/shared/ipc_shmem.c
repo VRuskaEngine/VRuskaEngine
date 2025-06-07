@@ -36,7 +36,7 @@ xrt_result_t
 ipc_shmem_create(size_t size, xrt_shmem_handle_t *out_handle, void **out_map)
 {
 
-	int fd = ASharedMemory_create("monado", size);
+	int fd = ASharedMemory_create("VRuska Engine", size);
 	if (fd < 0) {
 		return XRT_ERROR_IPC_FAILURE;
 	}
@@ -51,13 +51,13 @@ ipc_shmem_create(size_t size, xrt_shmem_handle_t *out_handle, void **out_map)
 
 #elif defined(XRT_OS_UNIX)
 
-#define MONADO_SHMEM_NAME "/monado_shm"
+#define VRuska Engine_SHMEM_NAME "/VRuska Engine_shm"
 // Impl for non-Android Unix.
 xrt_result_t
 ipc_shmem_create(size_t size, xrt_shmem_handle_t *out_handle, void **out_map)
 {
 	*out_handle = -1;
-	int fd = shm_open(MONADO_SHMEM_NAME, O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
+	int fd = shm_open(VRuska Engine_SHMEM_NAME, O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
 	if (fd < 0) {
 		return XRT_ERROR_IPC_FAILURE;
 	}
@@ -73,7 +73,7 @@ ipc_shmem_create(size_t size, xrt_shmem_handle_t *out_handle, void **out_map)
 	}
 
 	// Don't need the name entry anymore, we can share the FD.
-	shm_unlink(MONADO_SHMEM_NAME);
+	shm_unlink(VRuska Engine_SHMEM_NAME);
 	*out_handle = fd;
 	return XRT_SUCCESS;
 }

@@ -65,7 +65,7 @@ u_process_create_if_not_running(void)
 	if (pfh == NULL) {
 		// other process is locking pid file
 		if (errno == EEXIST) {
-			U_LOG_E("Monado is already running, pid %d", otherpid);
+			U_LOG_E("VRuska Engine is already running, pid %d", otherpid);
 		}
 		U_LOG_E("Failed to create pidfile: %s", strerror(errno));
 		return NULL;
@@ -81,7 +81,7 @@ u_process_create_if_not_running(void)
 	struct u_process *ret = U_TYPED_CALLOC(struct u_process);
 	ret->pfh = pfh;
 
-	U_LOG_T("No other Monado instance was running, got new pidfile");
+	U_LOG_T("No other VRuska Engine instance was running, got new pidfile");
 	return ret;
 #else
 	struct u_process *ret = U_TYPED_CALLOC(struct u_process);

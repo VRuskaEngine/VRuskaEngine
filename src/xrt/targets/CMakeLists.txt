@@ -7,20 +7,20 @@
 
 add_subdirectory(common)
 
-# Monado management library
+# VRuska Engine management library
 if(XRT_FEATURE_SERVICE AND XRT_HAVE_LINUX)
-	add_subdirectory(libmonado)
+	add_subdirectory(libVRuska Engine)
 endif()
 
 if(XRT_FEATURE_OPENXR)
 	add_subdirectory(openxr)
 endif()
 
-if(XRT_MODULE_MONADO_CLI)
+if(XRT_MODULE_VRuska Engine_CLI)
 	add_subdirectory(cli)
 endif()
 
-if(XRT_MODULE_MONADO_GUI)
+if(XRT_MODULE_VRuska Engine_GUI)
 	add_subdirectory(gui)
 endif()
 

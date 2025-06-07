@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: BSL-1.0
 /*!
  * @file
- * @brief  Holds the git hash of Monado.
+ * @brief  Holds the git hash of VRuska Engine.
  * @author Jakob Bornecrantz <jakob@collabora.com>
  * @ingroup aux_util
  */

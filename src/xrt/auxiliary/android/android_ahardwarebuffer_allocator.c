@@ -165,7 +165,7 @@ ahardwarebuffer_images_allocate(struct xrt_image_native_allocator *xina,
 	desc.width = xsci->width;
 	desc.format = ahb_format;
 	desc.layers = xsci->array_size;
-	// Monado always samples layers
+	// VRuska Engine always samples layers
 	desc.usage |= AHARDWAREBUFFER_USAGE_GPU_SAMPLED_IMAGE;
 	if (xsci->face_count == 6) {
 		desc.usage |= AHARDWAREBUFFER_USAGE_GPU_CUBE_MAP;

@@ -100,7 +100,7 @@ rift_s_parse_imu_calibration(char *json_string, struct rift_s_imu_calibration *c
 	if (!JSON_MATRIX_4x4_ARRAY(imu, "DeviceFromImu", c->device_from_imu))
 		goto fail;
 
-	/* Monado / Eigen expect column major 4x4 isometry, so transpose */
+	/* VRuska Engine / Eigen expect column major 4x4 isometry, so transpose */
 	math_matrix_4x4_transpose(&c->device_from_imu, &c->device_from_imu);
 
 	obj = u_json_get(imu, "Gyroscope");
@@ -165,7 +165,7 @@ rift_s_config_parse_camera_config(struct rift_s_camera_calibration *cam_config, 
 		return false;
 	}
 
-	/* Monado / Eigen expect column major 4x4 isometry, so transpose */
+	/* VRuska Engine / Eigen expect column major 4x4 isometry, so transpose */
 	math_matrix_4x4_transpose(&cam_config->device_from_camera, &cam_config->device_from_camera);
 
 	obj = u_json_get(camera_json, "Projection");

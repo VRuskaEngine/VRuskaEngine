@@ -121,9 +121,9 @@ if(ANDROID)
 		ipc_android STATIC
 		android/ipc_client_android.cpp
 		android/ipc_client_android.h
-		android/org.freedesktop.monado.ipc.cpp
-		android/org.freedesktop.monado.ipc.hpp
-		android/org.freedesktop.monado.ipc.impl.hpp
+		android/org.freedesktop.VRuska Engine.ipc.cpp
+		android/org.freedesktop.VRuska Engine.ipc.hpp
+		android/org.freedesktop.VRuska Engine.ipc.impl.hpp
 		)
 	target_link_libraries(
 		ipc_android PUBLIC xrt-external-jni-wrap xrt-external-jnipp aux_android

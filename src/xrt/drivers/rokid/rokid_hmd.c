@@ -452,7 +452,7 @@ rokid_hmd_get_tracked_pose(struct xrt_device *xdev,
 static struct xrt_device *
 rokid_hmd_create(struct xrt_prober_device *prober_device)
 {
-	// This indicates you won't be using Monado's built-in tracking algorithms.
+	// This indicates you won't be using VRuska Engine's built-in tracking algorithms.
 	enum u_device_alloc_flags flags =
 	    (enum u_device_alloc_flags)(U_DEVICE_ALLOC_HMD | U_DEVICE_ALLOC_TRACKING_NONE);
 

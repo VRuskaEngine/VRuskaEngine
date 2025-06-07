@@ -199,7 +199,7 @@ u_config_json_assign_schema(struct u_config_json *json)
 {
 	cJSON_DeleteItemFromObject(json->root, "$schema");
 	cJSON_AddStringToObject(json->root, "$schema",
-	                        "https://monado.pages.freedesktop.org/monado/config_v0.schema.json");
+	                        "https://VRuska Engine.pages.freedesktop.org/VRuska Engine/config_v0.schema.json");
 }
 
 static bool

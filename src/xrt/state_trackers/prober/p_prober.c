@@ -737,7 +737,7 @@ add_from_auto_probers(struct prober *p, struct xrt_device **xdevs, size_t xdev_c
 
 		/*
 		 * If we have found a HMD, tell the auto probers not to open
-		 * any more HMDs. This is mostly to stop OpenHMD and Monado
+		 * any more HMDs. This is mostly to stop OpenHMD and VRuska Engine
 		 * fighting over devices.
 		 */
 		bool no_hmds = *have_hmd;

@@ -1295,7 +1295,7 @@ enum xrt_input_type
 
 
 /*!
- * Every internal input source known to monado with a baked in type.
+ * Every internal input source known to VRuska Engine with a baked in type.
  * Values are maintained in XRT_INPUT_LIST.
  *
  * @see xrt_input_type

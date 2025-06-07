@@ -8,7 +8,7 @@
  * @author Jakob Bornecrantz <jakob@collabora.com>
  *
  * This file contains the declaration of the @ref vit_tracker struct. This
- * header is intended to appear in both consumers (e.g., Monado) and external
+ * header is intended to appear in both consumers (e.g., VRuska Engine) and external
  * visual-inertial tracking (VIT) systems (e.g., Basalt). The implementation of
  * `vit_interface` is provided by the external system. Additional data types are
  * declared for the communication between consumers and the system.

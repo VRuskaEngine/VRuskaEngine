@@ -108,7 +108,7 @@ enum t_camera_distortion_model
 	 *
 	 * \f[(k_1, k_2, k_3, k_4)\f]
 	 *
-	 * Many cameras use this model. Here's a non-exhaustive list of cameras Monado knows about that fall under this
+	 * Many cameras use this model. Here's a non-exhaustive list of cameras VRuska Engine knows about that fall under this
 	 * model:
 	 * * Intel T265
 	 * * Valve Index

@@ -412,7 +412,7 @@ oxr_session_poll(struct oxr_logger *log, struct oxr_session *sess)
 			oxr_session_change_state(log, sess, XR_SESSION_STATE_STOPPING, 0);
 		}
 		// TODO return here to avoid polling other events?
-		// see https://gitlab.freedesktop.org/monado/monado/-/issues/419
+		// see https://gitlab.freedesktop.org/VRuska Engine/VRuska Engine/-/issues/419
 	}
 
 	// Most recent Android activity lifecycle event was OnResume: move toward ready

@@ -14,7 +14,7 @@ extern "C" {
 #endif
 
 void *
-illixr_monado_create_plugin(void *pb);
+illixr_VRuska Engine_create_plugin(void *pb);
 struct xrt_pose
 illixr_read_pose();
 

@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: BSL-1.0
 /*!
  * @file
- * @brief  Common file for the Monado GUI program.
+ * @brief  Common file for the VRuska Engine GUI program.
  * @author Jakob Bornecrantz <jakob@collabora.com>
  * @ingroup gui
  */
@@ -16,7 +16,7 @@
  * @defgroup gui GUI Config Interface
  * @ingroup xrt
  *
- * @brief Small GUI interface to configure Monado based on SDL2.
+ * @brief Small GUI interface to configure VRuska Engine based on SDL2.
  */
 
 #ifdef __cplusplus

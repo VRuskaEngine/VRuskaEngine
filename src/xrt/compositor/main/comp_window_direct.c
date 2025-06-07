@@ -211,8 +211,8 @@ comp_window_direct_create_surface(struct comp_target_swapchain *cts,
 
 	/*
 	 * This fixes a bug on NVIDIA Jetson. Note this isn't so much the NVIDIA
-	 * Jetson fault, while the code was working on desktop, Monado did
-	 * something wrong. What happned was that Monado would select a mode
+	 * Jetson fault, while the code was working on desktop, VRuska Engine did
+	 * something wrong. What happned was that VRuska Engine would select a mode
 	 * with one size, while then creating a VkSurface/VkSwapchain of a
 	 * different size. This would work on hardware with scalers/panning
 	 * modes. The NVIDIA Jetson apparently doesn't have support for that so

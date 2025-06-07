@@ -97,11 +97,11 @@ struct xrt_instance_info
 /*!
  * @interface xrt_instance
  *
- * This interface acts as a root object for Monado.
+ * This interface acts as a root object for VRuska Engine.
  * It typically either wraps an @ref xrt_prober or forms a connection to an
  * out-of-process XR service.
  *
- * This is as close to a singleton object as there is in Monado: you should not
+ * This is as close to a singleton object as there is in VRuska Engine: you should not
  * create more than one xrt_instance implementation per process.
  *
  * Each "target" will provide its own (private) implementation of this

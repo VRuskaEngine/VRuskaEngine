@@ -125,7 +125,7 @@ on_video_device(struct xrt_prober *xp,
 	if (vs->xfs == NULL) {
 		U_LOG_E("Failed to open camera!");
 #if defined(XRT_OS_LINUX) && !defined(XRT_HAVE_V4L2)
-		U_LOG_E("Monado was built with the v4l driver disabled. Most video devices require this driver!");
+		U_LOG_E("VRuska Engine was built with the v4l driver disabled. Most video devices require this driver!");
 #endif
 		free(vs->xfctx);
 		vs->xfctx = NULL;

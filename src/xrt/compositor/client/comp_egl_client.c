@@ -297,7 +297,7 @@ check_context_and_debug_print(EGLint egl_client_type)
 
 	/*
 	 * If a renderer is old enough to not support OpenGL(ES) 3 or above
-	 * it won't support Monado at all, it's not a hard requirement and
+	 * it won't support VRuska Engine at all, it's not a hard requirement and
 	 * lets us detect weird errors early on some platforms.
 	 */
 	if (!GLAD_GL_VERSION_3_0 && !GLAD_GL_ES_VERSION_3_0) {

@@ -3,7 +3,7 @@
 /*!
  * @file
  * @brief  Common settings structs to be transferred between different parts of
- *         Monado, mainly for tracking and camera usage.
+ *         VRuska Engine, mainly for tracking and camera usage.
  * @author Jakob Bornecrantz <jakob@collabora.com>
  * @ingroup xrt_iface
  */

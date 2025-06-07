@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: BSL-1.0
 /*!
  * @file
- * @brief  Pretty printing various Monado things.
+ * @brief  Pretty printing various VRuska Engine things.
  * @author Jakob Bornecrantz <jakob@collabora.com>
  * @ingroup aux_pretty
  */
@@ -26,7 +26,7 @@ extern "C" {
  * Some functions have a `_indented` suffix added to them, this means that what
  * they print starts indented, but also they start with a newline. This is so
  * they can easily be chained together to form a debug message printing out
- * various information. Most of the final logging functions in Monado inserts a
+ * various information. Most of the final logging functions in VRuska Engine inserts a
  * newline at the end of the message and we don't want two to be inserted.
  */
 

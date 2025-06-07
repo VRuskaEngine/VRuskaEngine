@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: BSL-1.0
 /*!
  * @file
- * @brief  Main file for Monado service.
+ * @brief  Main file for VRuska Engine service.
  * @author Pete Black <pblack@collabora.com>
  * @author Jakob Bornecrantz <jakob@collabora.com>
  * @ingroup ipc
@@ -41,7 +41,7 @@ main(int argc, char *argv[])
 	struct ipc_server_main_info ismi = {
 	    .udgci =
 	        {
-	            .window_title = "Monado! ✨⚡🔥",
+	            .window_title = "VRuska Engine! ✨⚡🔥",
 	            .open = U_DEBUG_GUI_OPEN_AUTO,
 	        },
 	};
