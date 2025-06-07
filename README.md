@@ -1,6 +1,6 @@
 # VRuska Engine
 
-Отечественный open-source движок для VR-устройств, созданный на основе [Monado](https://gitlab.freedesktop.org/monado/monado). 
+Отечественный open-source движок для VR-устройств, созданный на основе [VRuska Engine](https://gitlab.freedesktop.org/VRuska Engine/VRuska Engine). 
 
 ## Возможности
 - Поддержка OpenXR
